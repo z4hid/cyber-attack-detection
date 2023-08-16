@@ -3,7 +3,7 @@ import time
 import numpy as np
 from PIL import Image
 import streamlit as st
-from tensorflow.keras.models import load_model
+import tensorflow as tf
 
 # Constants
 MODEL_PATH = "models/model.h5"
@@ -12,11 +12,6 @@ CLASS_NAMES = [
     'Loki', 'Mirai', 'NetSupportRAT', 'NjRat', 'Non-Malicious', 'QBot',
     'RedLineStealer', 'Remcos', 'Vidar'
 ]
-
-# Functions
-def load_ml_model(path):
-    """Load the trained machine learning model from the specified path."""
-    return load_model(path)
 
 def classify_uploaded_image(img):
     """Classify the uploaded image using the trained model."""
@@ -61,7 +56,7 @@ st.markdown(
 os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
 # Load model
-model = load_ml_model(MODEL_PATH)
+model = tf.keras.models.load_model(MODEL_PATH)
 
 # Streamlit UI
 st.title("Cyber Attack Detection using A.I. 🛡️")
