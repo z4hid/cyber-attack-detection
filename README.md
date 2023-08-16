@@ -9,6 +9,9 @@ This repository contains a state-of-the-art application for detecting potential 
 - Provides confidence scores for detected threats.
 - Converts binary files to RGB images for deep learning-based classification.
 
+## Live Demo
+Experience the application in action! Visit the live demo [here](https://cyber-attack-detection.streamlit.app/).
+
 ## Malware Classes
 The model can identify the following malware classes:
 - AgentTesla

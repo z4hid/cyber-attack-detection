@@ -117,7 +117,14 @@ model = tf.keras.models.load_model(MODEL_PATH)
 
 # Streamlit UI
 st.title("Cyber Attack Detection using A.I.")
-st.write("Our Cyber Attack Detection platform is a cutting-edge tool that uses advanced Artificial Intelligence to identify potential cyber threats. The platform is trained on 15 of the most prevalent malware classes using the latest samples and statistics from MalwareBazaar.")
+st.write("Our Cyber Attack Detection platform is a cutting-edge tool that uses advanced Artificial Intelligence to identify potential cyber threats.")
+
+# How to Use section
+st.subheader("How to Use")
+st.markdown("""
+1. Upload the binary or portable executable file you want to inspect.
+2. Click on "Scan Now" and wait for the results.
+""")
 
 uploaded_file = st.file_uploader(label="Upload Binary/Portable Executable File")
 
